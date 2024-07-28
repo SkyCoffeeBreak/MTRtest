@@ -1,3 +1,4 @@
+/* Universal Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -45,9 +46,9 @@ section {
 }
 
 .gallery img {
-    width: 200px; /* Set the desired width */
-    height: 150px; /* Set the desired height */
-    object-fit: cover; /* Ensures images cover the specified dimensions without distortion */
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
     margin: 5px;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -60,16 +61,16 @@ section {
 
 /* Modal Styles */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top */
-    padding-top: 60px; /* Location of the box */
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
 }
 
 .modal-content {
@@ -146,7 +147,7 @@ section {
 }
 
 .logo {
-    width: 100px; /* Adjust the size as needed */
+    width: 100px;
     height: auto;
 }
 
@@ -164,113 +165,18 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.hero_area {
-    position: relative;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+/* Disable Responsive Design */
+@media only screen and (max-width: 1200px) {
+    body {
+        zoom: 80%; /* Adjust the zoom percentage as needed */
+    }
 }
 
-.sub_page .hero_area {
-    min-height: auto;
-}
-
-.sub_page .header_section {
-    margin-top: 0;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
-}
-
-.header_section .header_top {
-    padding: 15px 0;
-    background-color: #04233b;
-}
-
-.header_section .header_top .contact_nav {
-    display: flex;
-    justify-content: space-between;
-}
-
-.header_section .header_top .contact_nav a {
-    color: #ffffff;
-    display: flex;
-    font-size: 15px;
-}
-
-.header_section .header_top .contact_nav a i {
-    margin-right: 5px;
-    border-radius: 100%;
-    background-color: #ffffff;
-    width: 25px;
-    height: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #0a97b0;
-}
-
-.header_section .header_top .contact_nav a:hover i {
-    color: #04233b;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-.hero_area {
-    width: 100%;
-    height: 100%;
-}
-
-.header_section {
-    background: #333;
-    color: #fff;
-    padding: 0;
-}
-
-.header_top {
-    background: #444;
-    padding: 0px 0;
-}
-
-.contact_nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.contact_nav a {
-    color: #fff;
-    text-decoration: none;
-    margin-right: 15px;
-}
-
-.header-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-}
-
-.header-content .logo {
-    width: 80px;
-    margin-right: 15px;
-}
-
+/* Further disable responsive elements if needed */
 nav ul {
-    list-style-type: none;
-    padding: 8px;
     display: flex;
     justify-content: center;
     background: #555;
-    margin: 0;
 }
 
 nav ul li {
@@ -278,13 +184,11 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
     padding: 6px;
 }
 
 nav ul li a:hover {
-    background-color: rgba(243, 156, 18, 0.7); /* Slightly translucent version of the active color */
+    background-color: rgba(243, 156, 18, 0.7);
     color: #fff;
     border-radius: 2px;
 }
@@ -293,35 +197,4 @@ nav ul li.active a {
     background-color: #f39c12;
     color: #fff;
     border-radius: 2px;
-}
-
-section {
-    padding: 20px;
-}
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.gallery img {
-    width: 200px; /* Set the desired width */
-    height: 150px; /* Set the desired height */
-    object-fit: cover; /* Ensures images cover the specified dimensions without distortion */
-    margin: 5px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    transition: transform 0.2s;
-}
-
-.gallery img:hover {
-    transform: scale(1.05);
-}
-
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
 }
