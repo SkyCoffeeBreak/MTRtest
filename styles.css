@@ -37,6 +37,7 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Gallery Styles */
 .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns layout */
@@ -48,19 +49,6 @@ section {
     height: auto;
     cursor: pointer;
     object-fit: cover; /* Ensure images maintain their aspect ratio */
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .gallery {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns layout for smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    .gallery {
-        grid-template-columns: repeat(3, 1fr); /* 3 columns layout for mobile screens */
-    }
 }
 
 /* Modal Styles */
@@ -142,6 +130,7 @@ section {
 .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
 }
+
 
 .header-content {
     display: flex;
