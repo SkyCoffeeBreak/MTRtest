@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="images/MTRIcon.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="hero_area">
@@ -21,12 +23,6 @@
                                 Call : +01 772-521-1312
                             </span>
                         </a>
-                        <a href="mailto:demo@gmail.com">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                            <span>
-                                Email : demo@gmail.com
-                            </span>
-                        </a>
                         <a href="">
                             <i class="fa fa-map-marker-alt" aria-hidden="true"></i>
                             <span>
@@ -37,7 +33,9 @@
                 </div>
             </div>
             <div class="header-content">
-                <img src="images/logo.png" alt="Metal Tile Roof LLC Logo" class="logo">
+                <a href="index.html">
+            <img src="images/logo.png" alt="ABC Metal Roofing Logo" class="logo">
+			</a>
                 <h1>Metal Tile Roof LLC</h1>
             </div>
             <nav>
@@ -51,29 +49,34 @@
         </header>
 
         <section id="gallery">
-            <h2>Gallery</h2>
+            <h2>Photo Gallery</h2>
             <div class="gallery">
-                <img src="images/roof1.png" alt="Roof 1" class="gallery-item">
-                <img src="images/roof2.png" alt="Roof 2" class="gallery-item">
-                <img src="images/roof3.png" alt="Roof 3" class="gallery-item">
-                <img src="images/roof4.png" alt="Roof 4" class="gallery-item">
-                <img src="images/roof5.png" alt="Roof 5" class="gallery-item">
-                <img src="images/roof7.png" alt="Roof 6" class="gallery-item">
+                <img src="images/roof1.png" alt="1/6" class="gallery-item">
+                <img src="images/roof2.png" alt="2/6" class="gallery-item">
+                <img src="images/roof3.png" alt="3/6" class="gallery-item">
+                <img src="images/roof4.png" alt="4/6" class="gallery-item">
+                <img src="images/roof5.png" alt="5/6" class="gallery-item">
+                <img src="images/roof7.png" alt="6/6" class="gallery-item">
+				<!-- Replace alt text with description of photo if desired -->
                 <!-- Add more images as needed -->
             </div>
             
+			<div id="indicator" class="indicator"></div>
+
+			
             <div class="video">
-                <h2>Watch Our Work in Action</h2>
+                <h2>See Our Work in Action</h2>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/Yyqz_xRX5qM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </section>
+		
 
         <div id="modal" class="modal">
+		<div id="caption"></div>
             <span class="close">&times;</span>
             <span class="prev">&#10094;</span>
             <span class="next">&#10095;</span>
             <img class="modal-content" id="modal-img">
-            <div id="caption"></div>
         </div>
 
         <footer>
@@ -82,5 +85,6 @@
     </div>
 
     <script src="script.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
 </body>
 </html>
