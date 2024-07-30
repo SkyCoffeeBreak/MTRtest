@@ -60,16 +60,15 @@ document.addEventListener('DOMContentLoaded', function () {
         prev.onclick();
     });
 
+    // Close modal when clicking anywhere outside the image
     modal.onclick = function (e) {
-        if (e.target === modal || e.target === close) {
+        if (e.target === modal) { // Clicked directly on the modal background
             modal.style.display = 'none';
         }
     };
 
-    var modalContent = document.querySelector('.modal-content-container');
-    if (modalContent) {
-        modalContent.onclick = function (e) {
-            e.stopPropagation(); // Prevent click event from bubbling up to the modal
-        };
-    }
+    // Close modal when clicking the close button
+    close.onclick = function () {
+        modal.style.display = 'none';
+    };
 });
