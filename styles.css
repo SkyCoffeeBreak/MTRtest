@@ -667,9 +667,31 @@ nav ul li.active a {
 }
 
 .gallery-heading {
+	display: block;
     margin-bottom: 20px;
 }
 
 .gallery-images {
     margin-top: 20px; /* Adjust the value as needed */
+}
+
+#instructions {
+    max-width: 800px; /* Set a max width to control the width of the section */
+    margin: 0 auto; /* Center the section horizontally within the page */
+    text-align: center; /* Center the text and button inside the section */
+    padding: 20px; /* Optional: Add padding for better spacing */
+}
+
+.pdf-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.pdf-button:hover {
+    background-color: #555;
 }
