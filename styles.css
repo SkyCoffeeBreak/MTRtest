@@ -765,6 +765,14 @@ nav ul li a:hover {
     display: block;
 }
 
+.dropdown > span {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+	font-size: 19px;
+}
+
 .installation-gallery {
     display: flex;
     flex-direction: column;
