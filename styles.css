@@ -695,3 +695,93 @@ nav ul li.active a {
 .pdf-button:hover {
     background-color: #555;
 }
+
+/* Style for main navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #333;
+    display: flex;
+}
+
+nav ul li {
+    position: relative;
+    display: inline-block;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+nav ul.sub-menu li a:hover {
+    background-color: white !important;  /* Change this to your desired background color */
+    color: #444 !important;  /* Change this to the original background color */
+}
+
+
+/* Change background on hover */
+nav ul li a:hover {
+    background: #ff9800;
+}
+
+/* Dropdown styles */
+.sub-menu {
+    display: none;
+    position: absolute;
+    background: #000; /* Black background */
+    top: 100%;
+    left: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 200px;
+}
+
+.sub-menu li {
+    display: block;
+}
+
+/* Default dropdown item style */
+.sub-menu li a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    background: #000; /* Black background */
+}
+
+/* Highlight dropdown item on hover */
+.sub-menu li a:hover {
+    background: #ff9800; /* Orange highlight */
+    color: white;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .sub-menu {
+    display: block;
+}
+
+.installation-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    width: 100%; /* Ensure the container takes full width */
+}
+
+.installation-gallery img {
+    width: 100%; /* Take full width of the screen */
+    max-width: 1600px; /* Prevent images from getting too large */
+    height: auto;
+    object-fit: cover; /* Ensures the image fills the space while maintaining aspect ratio */
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+}
+
