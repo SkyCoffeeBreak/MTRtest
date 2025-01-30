@@ -10,10 +10,10 @@ document.addEventListener('DOMContentLoaded', function () {
     var close = document.querySelector('.close');
 
     images.forEach((img, index) => {
-        img.addEventListener('click', function () {
-            modal.style.display = 'flex';
-            modalImg.src = this.src;
-            captionText.innerHTML = this.alt;
+        img.addEventListener('click', function (event) {
+            modal.classList.add('visible'); // Instead of modal.style.display = 'flex'
+            modalImg.src = event.currentTarget.src; // Ensuring 'this' works
+            captionText.innerHTML = event.currentTarget.alt;
             currentIndex = index;
             updateIndicator();
             modalImg.classList.remove('slide-out-left', 'slide-out-right', 'slide-in-left', 'slide-in-right');
@@ -32,14 +32,16 @@ document.addEventListener('DOMContentLoaded', function () {
         modalImg.classList.add('slide-out-' + direction);
 
         setTimeout(() => {
-            modalImg.src = images[index].src;
-            captionText.innerHTML = images[index].alt;
-            currentIndex = index;
-            updateIndicator();
+            requestAnimationFrame(() => {
+                modalImg.src = images[index].src;
+                captionText.innerHTML = images[index].alt;
+                currentIndex = index;
+                updateIndicator();
 
-            modalImg.classList.remove('slide-out-left', 'slide-out-right');
-            modalImg.classList.add('slide-in-' + (direction === 'left' ? 'right' : 'left'));
-        }, 300); // Adjust this timeout to match the slide-out animation duration
+                modalImg.classList.remove('slide-out-left', 'slide-out-right');
+                modalImg.classList.add('slide-in-' + (direction === 'left' ? 'right' : 'left'));
+            });
+        }, 300); // Matches the animation duration
     }
 
     prev.onclick = function () {
@@ -52,23 +54,26 @@ document.addEventListener('DOMContentLoaded', function () {
         showImage(newIndex, 'left'); // Correct direction for sliding out
     };
 
-    var hammer = new Hammer(modalImg);
-    hammer.on('swipeleft', function () {
-        next.onclick();
-    });
-    hammer.on('swiperight', function () {
-        prev.onclick();
-    });
+    // Only initialize Hammer.js if touch events are supported
+    if ('ontouchstart' in window) {
+        var hammer = new Hammer(modalImg);
+        hammer.on('swipeleft', function () {
+            next.onclick();
+        });
+        hammer.on('swiperight', function () {
+            prev.onclick();
+        });
+    }
 
-    // Close modal when clicking anywhere outside the image
+    // Close modal when clicking outside the image
     modal.onclick = function (e) {
-        if (e.target === modal) { // Clicked directly on the modal background
-            modal.style.display = 'none';
+        if (e.target === modal) {
+            modal.classList.remove('visible'); // Hide modal using CSS
         }
     };
 
     // Close modal when clicking the close button
     close.onclick = function () {
-        modal.style.display = 'none';
+        modal.classList.remove('visible');
     };
 });
