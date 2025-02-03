@@ -500,29 +500,6 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-
-@media only screen and (max-width: 600px) {
-    body {
-        /* Remove scale and let the content adapt naturally */
-    }
-    h2 {
-        font-size: 1.5em;
-    }
-    p {
-        font-size: 1em;
-    }
-    nav ul li a {
-        padding: 8px 12px;
-        font-size: 16px;
-    }
-    section {
-        padding: 1em;
-        margin: 0.5em;
-        max-width: 100%;
-    }
-}
-
-
 nav ul {
     display: flex;
     justify-content: center;
@@ -548,6 +525,36 @@ nav ul li.active a {
     background-color: #f39c12;
     color: #fff;
     border-radius: 2px;
+}
+
+@media only screen and (max-width: 920px) {
+    body {
+        /* Remove scale and let the content adapt naturally */
+    }
+    h2 {
+        font-size: 1.3em;
+    }
+    p {
+        font-size: 0.75em;
+    }
+    nav ul li a {
+        padding: 5px 8px;
+        font-size: 18px;
+    }
+    section {
+        padding: 1em;
+        margin: 1em;
+        max-width: 100%;
+    }
+	.gallery img {
+    width: 140px;
+    height: 90px;
+    object-fit: cover;
+    margin: 2px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    transition: transform 0.2s;
+	}
 }
 
 .header_top {
